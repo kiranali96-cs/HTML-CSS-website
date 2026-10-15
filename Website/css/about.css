@@ -1,0 +1,146 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+
+.about-header {
+    background-color: #02a1d6;
+    ; /* dark green as in screenshot */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.about-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+.our-story {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.our-story h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.our-story p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.our-story-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.our-story-image img {
+
+    width: 70%;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* Values Section */
+.values-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.values-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.values-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.values-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 26px;
+    flex: 1 1 250px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card .icon {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #1E73BE;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .values-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+

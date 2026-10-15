@@ -1,0 +1,713 @@
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f5f5;color:#333;}
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+
+/* NAVBAR */
+.navbar{background:#fff;padding:15px 0;box-shadow:0 0 10px rgba(0,0,0,0.08);position:sticky;top:0;z-index:100;}
+.nav-content{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:26px;font-weight:600;}
+.logo span{color:#02a1d6;}
+.nav-links{display:flex;gap:25px;list-style:none;}
+.nav-links a{text-decoration:none;font-weight:500;color:#333;transition:0.3s;}
+.nav-links a:hover,.nav-links .active{color:#fb6a0f;}
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+
+.about-header {
+    background-color: #02a1d6;
+    ; /* dark green as in screenshot */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.about-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+.our-story {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.our-story h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.our-story p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.our-story-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.our-story-image img {
+
+    width: 70%;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* Values Section */
+.values-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.values-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.values-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.values-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 26px;
+    flex: 1 1 250px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card .icon {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #1E73BE;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .values-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.services-section {
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+
+.services-header {
+    background-color: #02a1d6;
+    ; /* dark green as in screenshot */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.services-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    
+}
+
+
+.services-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- 3. Services Container (White Section) --- */
+
+.services-container {
+    display: flex; /* Flexbox for column layout */
+    padding: 3rem 5%;
+    background-color: #fff;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    gap: 20px;
+}
+
+/* --- 4. Individual Service Card Styling --- */
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    flex: 1 1 300px; /* Har card kam se kam 300px legi aur grow/shrink hogi */
+    border-right: 1px solid #eee; /* Columns ke beech ki halki line */
+    min-height: 500px; /* Card ki height maintain karne ke liye */
+}
+
+/* Last card se border-right hatana */
+.service-card:last-child {
+    border-right: none;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-title i {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.service-card .description {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    min-height: auto; /* Taa ki descriptions barabar na hone par bhi height maintain ho */
+}
+
+/* --- 5. List Styling --- */
+
+.service-list {
+    margin-bottom: 1.5rem; /* Button ko bottom mein push karega */
+    padding-left: 1rem;
+}
+
+.service-list li {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    /* Custom bullet point (image jaisa) */
+    list-style: disc outside; 
+    padding-left: 0.5rem;
+}
+
+/* --- 6. Button Styling (Green Background) --- */
+
+.service-button {
+    display: block; /* Poori width legi */
+    text-align: center;
+    background-color: #02a1d6;
+    color: var(--text-light);
+    padding: 0.75rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0; /* List aur button ke beech ki jagah */
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.service-button:hover {
+    background-color: #fb6a0f; /* Hover effect */
+    transform: translateY(-2px);
+}
+
+/* --- 7. Responsiveness (Mobile and Tablet) --- */
+
+@media (max-width: 992px) {
+    /* Tablet view: 2 cards per row */
+    .service-card {
+        flex: 1 1 45%; 
+        min-height: 400px; 
+    }
+    
+    /* Har doosri card ka right border hatana */
+    .service-card:nth-child(even) {
+        border-right: none;
+    }
+    /* Har teesri card (jo pehle last thi) ka border wapas lagana */
+    .service-card:nth-child(odd) {
+        border-right: 1px solid #eee;
+    }
+    /* Aakhri card ka border remove karna */
+    .service-card:last-child {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile view: 1 card per row */
+    .services-container {
+        flex-direction: column;
+    }
+    
+    .service-card {
+        flex: 1 1 100%;
+        border-right: none; /* Mobile mein koi vertical line nahi */
+        border-bottom: 1px solid #eee; /* Bottom mein halki line */
+        padding-bottom: 3rem;
+        min-height: auto;
+    }
+    
+    .service-card:last-child {
+        border-bottom: none;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .service-list {
+        padding-left: 0;
+    }
+}
+      .service-section {
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+/* Header Section – Green Top Box */
+.service-header {
+     background-color: #02a1d6;
+    ; /* dark green as in screenshot */
+    color: #fff;
+    text-align: center;
+    padding: 57px 20px;
+    border-radius: 10px;
+    
+}
+
+/* Form Section - White Area */
+.service-form-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    position: relative;
+}
+
+
+/* Form Styling */
+.service-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Checkbox Styling */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #02a1d6;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #fb6a0f;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+    /* HERO SECTION */
+
+.contact-section {
+    background-color: #ffffff;
+    padding: 0px 10px;  
+}
+
+.contact-hero {
+  background: #02a1d6;
+  text-align: center;
+  padding: 48px 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.contact-hero h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* INFO ROW */
+.info-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  text-align: center;
+  width: 260px;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e5f2e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+}
+
+.icon-circle img {
+  width: 28px;
+  opacity: 0.7;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 15px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+/* MAIN AREA */
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 420px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* FORM CARD */
+.form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width:50%;
+}
+
+.input-group.full {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.send-btn {
+  background: #02a1d6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #fb6a0f;
+  transform: translateY(-2px);
+}
+
+/* WORKING HOURS */
+.hours h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.emergency-title {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.emergency-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.emergency-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #02a1d6;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* -------- Tablet (768px) -------- */
+@media (max-width: 768px) {
+
+  .info-row {
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .info-card {
+    width: 220px;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+}
+
+/* -------- Mobile (480px) -------- */
+@media (max-width: 480px) {
+
+  .contact-hero h1 {
+    font-size: 26px;
+  }
+
+  .contact-hero p {
+    font-size: 14px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+  }
+
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .main {
+    padding: 20px 10px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .line {
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+}
+
+/* HERO */
+.hero{height:90vh;position:relative;display:flex;align-items:center;justify-content:center;}
+.hero-video{width:100%;height:100%;object-fit:cover;position:absolute;z-index:-2;}
+.overlay{width:100%;height:100%;background:rgba(246, 247, 247, 0.45);position:absolute;z-index:-1;}
+.hero-text{text-align:center;color:rgb(8, 8, 8);max-width:650px;padding:20px;}
+.hero-text h1{font-size:48px;font-weight:700;margin-bottom:10px;}
+.hero-text p{font-size:18px;margin-bottom:20px;}
+.hero-btn{padding:14px 25px;background:#02a1d6;color:#fff;text-decoration:none;font-weight:500;border-radius:8px;transition:0.3s;}
+.hero-btn:hover{background:#fb6a0f;}
+
+/* OUR VALUE */
+.our-value{padding:60px 0;background:#fff;}
+.section-title{font-size:32px;font-weight:600;text-align:center;margin-bottom:40px;}
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.value-item{background:#02a1d6;color:white;padding:25px;border-radius:12px;text-align:center;}
+
+/* PROVIDER SKILLS */
+.provider-skills{padding:60px 0;background:#f7f7f7;}
+.skills-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:30px;}
+.skills-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s;}
+.skills-card:hover{transform:translateY(-5px);}
+.skills-card h3{margin:15px 0 10px;font-size:20px;}
+.skills-card p{font-size:14px;line-height:1.6;}
+.skills-image{width:100%;border-radius:12px;object-fit:cover;height:200px;}
+.skills-video{width:100%;border-radius:12px;margin-top:15px;}
+
+/* FOUNDER SECTION */
+.founder-section{padding:60px 0;background:#fff;}
+.founder-container{display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+.founder-image img{width:300px;border-radius:12px;object-fit:cover;}
+.founder-text h2{font-size:28px;margin-bottom:15px;}
+.founder-text p{font-size:16px;line-height:1.6;}
+
+/* FOOTER */
+.footer{background:#111;color:#ddd;padding:50px 0 20px;}
+.footer-content{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+.footer-logo h2{font-size:26px;}
+.footer-logo span{color:#fb6a0f;}
+.footer-links ul{list-style:none;}
+.footer-links a{color:#ddd;text-decoration:none;transition:0.3s;}
+.footer-links a:hover{color:#fb6a0f;}
+.footer-contact p{margin-bottom:5px;}
+.footer p{text-align:center;margin-top:30px;color:#bbb;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero-text h1{font-size:34px;}
+    .nav-links{flex-direction:column;gap:15px;margin-top:10px;}
+    .founder-container{flex-direction:column;}
+}
+

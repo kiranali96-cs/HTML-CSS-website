@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Service</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/request.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">Service<span>Hub</span></h2>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="request.html" class="active">Request</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <!-- Header Section -->
+    <section class="service-section">
+        <div class="service-header">
+            <h1>Request a Service</h1>
+            <p>Fill out the form below to schedule a service. We'll get back to you promptly to confirm your appointment.</p>
+        </div>
+    
+
+    <!-- Form Section -->
+    <section class="service-form-section">
+        <div class="service-section">
+            <form class="service-form">
+                <div class="form-group">
+                    <label for="service-type">Service Type *</label>
+                    <select id="service-type" required>
+                        <option value="">Select a service</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="repair">Repair</option>
+                        <option value="consultation">Consultation</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="+91 9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" placeholder="123 Main St, City" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="preferred-date">Preferred Date *</label>
+                        <input type="date" id="preferred-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-time">Preferred Time *</label>
+                        <input type="time" id="preferred-time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Describe your issue or service needed *</label>
+                    <textarea id="description" placeholder="Please provide details about the service you need..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="urgent">
+                        <input type="checkbox" id="urgent">
+                        This is an urgent request (additional charges may apply)
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Service Request</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

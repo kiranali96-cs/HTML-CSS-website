@@ -1,0 +1,200 @@
+/* --- 1. Variables and Reset --- */
+:root {
+    /* Colors used in the image */
+    --primary-green: #02a1d6; /* Darker Green for Header/Buttons */
+    --light-green: #4caf50; /* Button Hover Color (Example) */
+    --text-dark: #333;
+    --text-light: #fff;
+    --text-gray: #666;
+    
+    /* Font (Image se milta-julta clean font) */
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.services-section {
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+
+.services-header {
+    background-color: #02a1d6;
+    ; /* dark green as in screenshot */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.services-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    
+}
+
+
+.services-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- 3. Services Container (White Section) --- */
+
+.services-container {
+    display: flex; /* Flexbox for column layout */
+    padding: 3rem 5%;
+    background-color: #fff;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    gap: 20px;
+}
+
+/* --- 4. Individual Service Card Styling --- */
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    flex: 1 1 300px; /* Har card kam se kam 300px legi aur grow/shrink hogi */
+    border-right: 1px solid #eee; /* Columns ke beech ki halki line */
+    min-height: 500px; /* Card ki height maintain karne ke liye */
+}
+
+/* Last card se border-right hatana */
+.service-card:last-child {
+    border-right: none;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-title i {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.service-card .description {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    min-height: auto; /* Taa ki descriptions barabar na hone par bhi height maintain ho */
+}
+
+/* --- 5. List Styling --- */
+
+.service-list {
+    margin-bottom: 1.5rem; /* Button ko bottom mein push karega */
+    padding-left: 1rem;
+}
+
+.service-list li {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    /* Custom bullet point (image jaisa) */
+    list-style: disc outside; 
+    padding-left: 0.5rem;
+}
+
+/* --- 6. Button Styling (Green Background) --- */
+
+.service-button {
+    display: block; /* Poori width legi */
+    text-align: center;
+    background-color: #02a1d6;
+    color: var(--text-light);
+    padding: 0.75rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0; /* List aur button ke beech ki jagah */
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.service-button:hover {
+    background-color: #fb6a0f; /* Hover effect */
+    transform: translateY(-2px);
+}
+
+/* --- 7. Responsiveness (Mobile and Tablet) --- */
+
+@media (max-width: 992px) {
+    /* Tablet view: 2 cards per row */
+    .service-card {
+        flex: 1 1 45%; 
+        min-height: 400px; 
+    }
+    
+    /* Har doosri card ka right border hatana */
+    .service-card:nth-child(even) {
+        border-right: none;
+    }
+    /* Har teesri card (jo pehle last thi) ka border wapas lagana */
+    .service-card:nth-child(odd) {
+        border-right: 1px solid #eee;
+    }
+    /* Aakhri card ka border remove karna */
+    .service-card:last-child {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile view: 1 card per row */
+    .services-container {
+        flex-direction: column;
+    }
+    
+    .service-card {
+        flex: 1 1 100%;
+        border-right: none; /* Mobile mein koi vertical line nahi */
+        border-bottom: 1px solid #eee; /* Bottom mein halki line */
+        padding-bottom: 3rem;
+        min-height: auto;
+    }
+    
+    .service-card:last-child {
+        border-bottom: none;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .service-list {
+        padding-left: 0;
+    }
+}
+          
